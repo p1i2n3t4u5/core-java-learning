@@ -4,6 +4,8 @@ public class Student {
 	private String name;
 	private int roll_No;
 	
+	private static String address;
+	
 	public Student() {
 		System.out.println("default constructor ");
 	}
@@ -14,7 +16,7 @@ public class Student {
 		this.roll_No=roll;
 	}
 	
-	public Student(String name) {
+	private Student(String name) {
 		System.out.println("name==="+name);
 		this.name=name;
 	}
@@ -49,6 +51,14 @@ public class Student {
 	
 	private static void display(String str) {
 		System.err.println("displaying something "+str);
+	}
+
+	public static String getAddress() {
+		return address;
+	}
+
+	public static void setAddress(String address) {
+		Student.address = address;
 	}
 	
 	

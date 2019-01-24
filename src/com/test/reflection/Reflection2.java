@@ -9,7 +9,7 @@ public class Reflection2 {
 	public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, SecurityException {
 		Student student=new Student();
 		
-		Class<?> c = Class.forName("com.javatest.reflection.Student");
+		Class<?> c = Class.forName("com.test.reflection.Student");
 		Field field= c.getDeclaredField("name");
 		System.out.println(field.getModifiers());
 		System.out.println(field.isAccessible());
@@ -24,6 +24,9 @@ public class Reflection2 {
 		}
 		
 		System.out.println(student);
+		
+		
+		
 		Method method=null;
 		try {
 			method=c.getDeclaredMethod("print");

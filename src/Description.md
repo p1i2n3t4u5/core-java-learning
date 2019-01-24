@@ -13,3 +13,12 @@ Classpath is nothing but setting up the environment for Java. Java will use to f
 
 In path we set the path of executables while in
 classpath we set path of jars for compiling classes.
+
+
+Creating Class object
+-----------------------
+Every class has class object
+1) student.getClass()
+2)Student.class
+3)Class.forName("com.javatest.reflection.Student")
+
