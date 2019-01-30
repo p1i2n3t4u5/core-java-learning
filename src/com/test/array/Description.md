@@ -35,7 +35,7 @@ System.arraycopy() is faster than clone() as it uses Java Native Interface
 
 Total Sub Array of an array
 --------------------------
- vector of N elements the total number of subarrays is N*(N+1)/2
+ vector of N elements the total number of sub-arrays is N*(N+1)/2
  
  
  
@@ -122,7 +122,17 @@ loop through the elements and add them to set. if add method returns false means
 
 
 
-
+BASIS FOR COMPARISON	ARRAY	LINKED LIST
+-----------------------------------------
+Basic -->It is a consistent set of a fixed number of data items.	It is an ordered set comprising a variable number of data items.
+Size    -->	Specified during declaration.	No need to specify; grow and shrink during execution.
+Storage --> Allocation	Element location is allocated during compile time. ======== Element position is assigned during run time.
+Order of the elements-->	Stored consecutively ======== Stored randomly
+Accessing the element-->	Direct or randomly accessed, i.e., Specify the array index or subscript.========= Sequentially accessed, i.e., Traverse starting from the first node in the list by the pointer.
+Insertion and deletion of element-->	Slow relatively as shifting is required.======== Easier, fast and efficient.
+Searching--> 	Binary search and linear ====== search	linear search
+Memory required-->	less	More
+Memory Utilization-->	Ineffective	======= Efficient
 
 
 
