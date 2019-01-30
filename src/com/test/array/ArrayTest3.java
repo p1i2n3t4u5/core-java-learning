@@ -9,10 +9,12 @@ public class ArrayTest3 {
 	// searching for a number in an array unsorted then sort first the apply binary search
 
 	public static void main(String[] args) {
-		int num = 18;
+		int num = 15;
 
-		Integer[] arr = { 1, 2, 3, 3, 4, 5, 6, 7, 8, 10, 15, 17, 21, 25 }; // sorted array
+		//Integer[] arr = { 1, 2, 3, 3, 4, 5, 6, 7, 8, 10, 15, 17, 21, 25 }; // sorted array
 		          //index 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,  10, 11, 12, 13     
+		
+		Integer[] arr =	{ 1, 2, 3, 4, 5, 6,  9,10 };
 		
 		ArrayTest3 test3 = new ArrayTest3();
 		System.out.println(test3.doSearch(arr, num, 0, arr.length - 1));
@@ -20,7 +22,7 @@ public class ArrayTest3 {
 
 	private int doSearch(Integer[] arr, Integer searchedNumber, int startIndex, int endIndex) {
 
-		int midIndex = startIndex+((endIndex - startIndex + 1) / 2) ;
+		int midIndex = startIndex+((endIndex - startIndex) / 2) ;
 		Integer midElement = arr[midIndex];
 
 		if (startIndex > endIndex) {
