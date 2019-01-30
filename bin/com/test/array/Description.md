@@ -79,6 +79,55 @@ Mid Index of an array
 ---------------------
 mid = start + (end - start)/2
 
+kth smallest and  kth largest element in an array
+----------------------------------------------------
+sort the array 
+retrive k-1 index element from array
+
+for kth largest (l-k) th element from the sorted array
+
+first non repeating element in an array
+---------------------------------------
+
+first non repeating means the element next to first repeating 
+
+Input : -1 2 -1 3 2
+Output : 3
+Explanation : The first number that does not 
+repeat is : 3
+
+Input : 9 4 9 6 7 4
+Output : 6
+
+approach is two loops compare each element and index is different 
+then that is the first repeating.
+check if the index less than last index.
+Next element to repeating index is first non-repeating 
+
+check array for duplicate elements
+-----------------------------------
+approach1
+--------
+put elements of array to a set and then compare the length. if set size is less means there is duplicate elements.
+
+approach 2
+------------
+compare each element of array to all other elements of array with two for loop approach.
+
+approach 3
+------------
+loop through the elements and add them to set. if add method returns false means it is duplicate element.
+
+
+
+
+
+
+
+
+
+
+
 
  
  
