@@ -1,4 +1,4 @@
-package com.test.classobject.string;
+package com.test.string;
 
 public class StringTest2 {
 	public static void main(String[] args) {

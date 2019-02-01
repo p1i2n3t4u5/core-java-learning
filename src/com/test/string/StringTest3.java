@@ -1,4 +1,4 @@
-package com.test.classobject.string;
+package com.test.string;
 
 import java.util.Arrays;
 
@@ -6,6 +6,7 @@ public class StringTest3 {
 
 	public static void main(String[] args) {
 		StringTest3 stringTest3 = new StringTest3();
+		stringTest3.approach2();
 	}
 
 	public void approach1() {
