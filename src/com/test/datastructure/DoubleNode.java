@@ -2,40 +2,42 @@ package com.test.datastructure;
 
 public class DoubleNode {
 
-	private Object value;
+	private Value value;
 
-	private SingleNode next;
+	private DoubleNode next;
 	
-	private SingleNode previous;
+	private DoubleNode previous;
 
 	public Object getValue() {
 		return value;
 	}
 
-	public void setValue(Object value) {
+	public void setValue(Value value) {
 		this.value = value;
 	}
 
-	public SingleNode getNext() {
+	public DoubleNode getNext() {
 		return next;
 	}
 
-	public void setNext(SingleNode next) {
+	public void setNext(DoubleNode next) {
 		this.next = next;
 	}
 
-	public SingleNode getPrevious() {
+	public DoubleNode getPrevious() {
 		return previous;
 	}
 
-	public void setPrevious(SingleNode previous) {
+	public void setPrevious(DoubleNode previous) {
 		this.previous = previous;
 	}
 
 	@Override
 	public String toString() {
-		return "DoubleNode [value=" + value + ", next=" + next + ", previous=" + previous + "]";
+		return "DoubleNode [value=" + value + "]";
 	}
-	
+
+
+
 	
 }
