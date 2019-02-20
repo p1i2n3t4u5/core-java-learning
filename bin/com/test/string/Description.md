@@ -52,6 +52,12 @@ StringBuilder
 StringBuilder  is same as the StringBuffer , that is it stores the object in heap and it can also be modified . The main difference between the StringBuffer and StringBuilder is that StringBuilder is also not thread safe. 
 StringBuilder is fast as it is not thread safe .
 
+clone() method in String class
+--------------------------------
+String is an immutable object, so it needn't a clone method since the client code can't change its state inside the String class.
+you can just ref to the original String, for example:
+String key2 = key1;// or using key1 directly instead.
+
 
 
   
