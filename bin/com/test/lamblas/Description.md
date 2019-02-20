@@ -30,6 +30,26 @@ The below line java compiler tries to match the functional interface with lambda
 Greeting greeting2=() -> System.out.println("Hello World From Lambda");
 
 
+Method Reference in Lambda
+------------------------------
+rules for using method reference:
+
+arguments should match both side of arrow function
+if it is static method it needs to be called with class name 
+ex:
+ ClassName::method
+
+if it is non-static  it should be called object 
+ex:
+ System.out::println 
+ this:printMethod();
+ 
+
+
+
+
+
+
 
 
 
