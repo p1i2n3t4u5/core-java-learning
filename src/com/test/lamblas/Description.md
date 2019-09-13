@@ -44,6 +44,17 @@ ex:
  System.out::println 
  this:printMethod();
  
+Interation in collection
+------------------------
+
+Internal and external
+
+internal is the new java 8 stream way ie sequential stream and parallel stream or forEach() method present in all collections
+
+external is generally for loop,old foreach loop,iterator 
+
+
+ 
 
 
 
