@@ -1,6 +1,5 @@
 package com.test.collection;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
@@ -20,11 +19,10 @@ public class Collection1 {
 				hashMap.put(character, 1);
 			}
 		}
-		
+
 		for (Entry<Character, Integer> entry : hashMap.entrySet()) {
-				System.out.println(entry.getKey()+" "+entry.getValue());
+			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
-		
 
 	}
 

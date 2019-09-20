@@ -2,10 +2,10 @@ package com.test.innerclasses;
 
 public class OuterClassNonstatic {
 	// private instance member 
-	private int nonstatic_variable = 5;
+	protected int nonstatic_variable = 5;
       
     // private member 
-    private static int static_variable = 30; 
+    protected static int static_variable = 30; 
 
 	public int getA() {
 		return nonstatic_variable;
@@ -20,9 +20,9 @@ public class OuterClassNonstatic {
 	}
 
 	public class InnerClass {
-		private int b = 6;
+		protected int b = 6;
 		
-		private void print() {
+		void print() {
 			System.out.println("accessing non static  private member outer class:"+nonstatic_variable);
 			System.out.println("accessing non static  private member outer class:"+static_variable);
 			

@@ -1,3 +1,10 @@
+Creating Class object
+-----------------------
+Every class has class object
+1) student.getClass()
+2)Student.class
+3)Class.forName("com.javatest.reflection.Student")
+
 Features
 -------------
   * getting class names at runtime and creating objects of that class

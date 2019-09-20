@@ -25,22 +25,14 @@ public class OuterClassStatic {
 
 
 	public static class InnerClass {
-		private int b = 6;
+		protected int b = 6;
 
-		private void print() {
-			System.out.println("accessing non static  private member outer class:" + static_variable);
-			// changing nonstatic variable's value
+		protected void print() {
+			System.out.println("accessing non static member outer class:" + static_variable);
 			static_variable = 50;
 			printStatic();
 		}
 	};
 
-	public static void main(String[] args) {
-		OuterClassStatic outerClassStatic = new OuterClassStatic();
-
-		InnerClass innerClass = new OuterClassStatic.InnerClass();
-		System.out.println(innerClass.b);
-		innerClass.print();
-	}
-
+	
 }
