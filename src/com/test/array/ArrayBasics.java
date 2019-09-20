@@ -14,7 +14,7 @@ public class ArrayBasics {
 		int num = 10;
 		System.out.println("array length:" + myIntArray.length);
 		for (int i = 0; i < myInteArray.length - 1; i++) {
-			myIntArray[i] = num++;
+			myIntArray[i] = num++;                         // post incrementer will assign first then increase the value
 			System.out.println(myIntArray[i]);
 		}
 

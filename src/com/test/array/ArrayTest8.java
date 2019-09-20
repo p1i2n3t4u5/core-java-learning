@@ -12,7 +12,7 @@ public class ArrayTest8 {
 		int[] intArray = { 1, 2, 3, 4, 5, 6, 5, 2, 3, 6, 9 };
 		
 		ArrayTest8 arrayTest8=new ArrayTest8();
-		//arrayTest8.approach1(str, intArray);
+		arrayTest8.approach1(str, intArray);
 		
 		arrayTest8.approach2(str, intArray);
 	}

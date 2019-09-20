@@ -3,6 +3,8 @@ package com.test.array;
 import java.util.HashSet;
 import java.util.Set;
 
+
+//check if duplicate present
 public class ArrayTest13 {
 
 	public static void main(String[] args) {

@@ -5,11 +5,12 @@ public class Student {
 	private int roll_No;
 
 	public String getName() {
+		System.out.println("getName called");
 		return name;
 	}
 
 	public void setName(String name) {
-		System.err.println(name);
+		System.out.println(name);
 		this.name = name;
 	}
 
@@ -18,7 +19,7 @@ public class Student {
 	}
 
 	public void setRoll_no(int roll_no) {
-		System.err.println(roll_no);
+		System.out.println(roll_no);
 		this.roll_No = roll_no;
 	}
 

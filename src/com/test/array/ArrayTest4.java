@@ -21,6 +21,7 @@ public class ArrayTest4 {
 		obj.approach3(a, givenNumber);
 	}
 
+	//complexity will n2 
 	public void approach1(int[] a, int givenNumber) {
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a.length; j++) {
@@ -58,6 +59,7 @@ public class ArrayTest4 {
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i]);
 			System.out.print(",");
+			System.out.println();
 		}
 		
 
