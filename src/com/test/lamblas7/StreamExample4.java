@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 public class StreamExample4 {
 
 	public static void main(String[] args) {
-		Stream<Integer> stream = Stream.of(1, 2, 3, 4);
+		Stream<Integer> stream = Stream.of(5,1, 2, 3, 4);
 
 		List<Integer> integers = stream.collect(Collectors.toList());
 		integers.stream().forEachOrdered((p) -> System.out.println(p));
@@ -16,8 +16,7 @@ public class StreamExample4 {
 		System.out.println("-------------------------------------------------------");
 		Stream<Integer> stream2 = Stream.of(new Integer[] { 1, 2, 3, 4, 5 });
 		stream2.forEach(System.out::println);
-		System.out.println("-------------------------------------------------------");
-		// this will not work out
+		System.out.println("------------------------this will not work out-------------------------------");
 		Stream<int[]> stream3 = Stream.of(new int[] { 1, 2, 3, 4 });
 		stream3.forEach(System.out::println);
 		System.out.println("-------------------------------------------------------");
@@ -28,7 +27,7 @@ public class StreamExample4 {
 		System.out.println("Convert to array:" + Stream.of(1, 2, 3, 4).mapToInt((p) -> p).toArray());
 		// findAny() for checking stream is empty or not
 		System.out.println("Convert to array:" + Stream.of(1, 2, 3, 4).mapToInt((p) -> p).findAny().getAsInt());
-		System.out.println("-------------------------------------------------------");
+		System.out.println("----------------------------reduce---------------------------");
 
 		int i = Stream.of(1, 2, 3, 4).mapToInt((p) -> p).reduce(0, (op1, op2) -> {
 			return op1 + op2;

@@ -3,6 +3,7 @@ package com.test.string;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
 public class StringTest1 {
@@ -15,7 +16,9 @@ public class StringTest1 {
 		stringTest1.approach3(s);
 		stringTest1.approach4(s);
 		stringTest1.approach5(s);
-
+		ArrayList<String>  arrayList=new ArrayList<>();
+		HashSet hs=new HashSet<>();
+        
 		stringTest1.reverse("abc");
 
 	}

@@ -38,6 +38,7 @@ public class CollectionLambdaExample {
 		persons.forEach(System.out::println);
 		
 		
+		
 	}
 
 }

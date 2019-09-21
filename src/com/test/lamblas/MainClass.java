@@ -27,12 +27,13 @@ public class MainClass {
 		
 		MyLambda lambda=() -> System.out.println("Hello World");
 		//lambda's type checking is done through functional interface
+		lambda.foo();
 		
 		MyLambda2 lambda2=(int a,int b)-> {
 			return a+b;
 		};
+		System.out.println(lambda2.foo(10, 20));
 	}
-
 }
 
 

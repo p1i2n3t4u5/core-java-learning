@@ -2,7 +2,7 @@ package com.test.lamblas7;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.IntStream;
+import java.util.stream.Collectors;
 
 public class StreamExample3 {
 
@@ -16,9 +16,11 @@ public class StreamExample3 {
 		int sum = numbers.stream().filter(n -> n > 10).mapToInt(i -> i * 2 / 2).sum();
 		System.out.println("sum:" + sum);
 
-		numbers.stream().filter(n -> n > 10).mapToInt(i -> {
+		List<Integer> collected = numbers.stream().filter(n -> n > 10).mapToInt(i -> {
 			return i * 2 / 2;
-		}).boxed();
+		}).boxed().collect(Collectors.toList());
+
+		System.out.println(Arrays.toString(collected.toArray()));
 
 		boolean b = numbers.stream().filter(n -> n >= 10).mapToInt(i -> {
 			return i * 2 / 2;
@@ -26,7 +28,6 @@ public class StreamExample3 {
 
 		System.out.println("Ten exist:" + b);
 
-		
 	}
 
 }
