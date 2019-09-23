@@ -48,13 +48,16 @@ To determine new bucket index, it uses the key's hashcode like below.
               its bucket index will be = (64 / 32)-1 = 2-1= 1st index  
               
 While moving the elements from the old bucket array to new bucket array the the order of the elements in new bucket gets 
-reverse. In this whole process if thread1 is pointing to the head element and next element and then scheduler picks the                
-thread 2 which will also tries and moves the entries from old to new (reverse order) but first thread still points to the elements thinking head is pointing to next element but in new bucket next element pointing to head element.Now the problem happens thread1 will place the head element  again at head position in new bucket pointing to the next element(entry1) but the next element already pointing to head element(head-entry) now the circle happens head pointing to entry1 and entry one pointing to head. Becoz of the same reason while searching for an element it will never reach the end of the linkedlist (bucket) becoz the end condition is the next element is null.
+reverse. In this whole process if thread1 is pointer current node pointing  to the head element and next pointer is pointing to next element and then scheduler picks the                
+thread 2 which will also tries and moves the entries from old to new (reverse order  and nodes in the new linked list or bucket array are placed at the begining to reduce the traversal time to put a new node) but first thread (according to thread1) still points to the elements thinking head is pointing to next element but in (actually ) new bucket next element pointing to head element.Now the problem happens thread1 will place the head element  again at head position in new bucket pointing to the next element(entry1) but the next element already pointing to head element(head-entry) now the circle happens head pointing to entry1 and entry one pointing to head. Becoz of the same reason while searching for an element it will never reach the end of the linkedlist (bucket) becoz the end condition is the next element is null.
 
 
 2) If collision(multiple objects are placed in same bucket) happens in hash map. 
    collision happens if multiple objects are having same hashcode or some how end up in same bucket are used as key of the hashmap.
    If multiple collision happens and one thread let thread1 is about put one entry next to the last entry let at the same thread scheduler picks another thread and starts executing and put an element at the end of the linked list which is being held by first thread.Now the scheduler picks the first thread again and first thread instead of putting the entry after the new entry it will overwrite the last entry.so one entry is lost.
+   
+   
+   http://javabypatel.blogspot.com/2016/01/infinite-loop-in-hashmap.html
 
 
 
