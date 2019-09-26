@@ -52,12 +52,21 @@ reverse. In this whole process if thread1 is pointer current node pointing  to t
 thread 2 which will also tries and moves the entries from old to new (reverse order  and nodes in the new linked list or bucket array are placed at the begining to reduce the traversal time to put a new node) but first thread (according to thread1) still points to the elements thinking head is pointing to next element but in (actually ) new bucket next element pointing to head element.Now the problem happens thread1 will place the head element  again at head position in new bucket pointing to the next element(entry1) but the next element already pointing to head element(head-entry) now the circle happens head pointing to entry1 and entry one pointing to head. Becoz of the same reason while searching for an element it will never reach the end of the linkedlist (bucket) becoz the end condition is the next element is null.
 
 
+nodes are removed from head level and kept at the beginning of new bucket.
+
+
 2) If collision(multiple objects are placed in same bucket) happens in hash map. 
    collision happens if multiple objects are having same hashcode or some how end up in same bucket are used as key of the hashmap.
    If multiple collision happens and one thread let thread1 is about put one entry next to the last entry let at the same thread scheduler picks another thread and starts executing and put an element at the end of the linked list which is being held by first thread.Now the scheduler picks the first thread again and first thread instead of putting the entry after the new entry it will overwrite the last entry.so one entry is lost.
    
    
    http://javabypatel.blogspot.com/2016/01/infinite-loop-in-hashmap.html
+   
+   
+WeakHashMap
+-----------
+WeakHashMap is an implementation of the Map interface. WeakHashMap is almost same as HashMap except in case of WeakHashMap, if object is specified as key doesn't contain any references- it is eligible for garbage collection even though it is associated with WeakHashMap. i.e Garbage Collector dominates over WeakHashMap.
+
 
 
 
