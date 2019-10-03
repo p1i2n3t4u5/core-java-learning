@@ -23,6 +23,7 @@ public class SingleThreadExecuterInvokeAny {
 		callables.add(new Callable<String>() {
 			public String call() throws Exception {
 				System.out.println("Task 2  executed");
+				Thread.sleep(1000);
 				return "Task 2";
 			}
 		});
