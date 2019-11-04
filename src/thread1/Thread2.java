@@ -27,7 +27,7 @@ public class Thread2 implements Runnable {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				buffer.notify();
+				//buffer.notify();
 			}
 			
 			i++;
