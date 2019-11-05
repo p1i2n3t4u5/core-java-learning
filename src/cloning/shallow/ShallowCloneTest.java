@@ -14,7 +14,7 @@ public class ShallowCloneTest {
 		}
 		System.out.println("printing cloned object:\n" + student2);
 		student2.setName("Satya");
-		System.out.println("printing cloned object:\n" + student2);
+		System.out.println("printing cloned object changing name :\n" + student2);
 		System.out.println("printing original object:\n" + student);
 
 		student2.getAddress().setCity("Bangalore");

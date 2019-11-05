@@ -12,6 +12,8 @@ public class ArrayCloning {
 		} else {
 			System.out.println("not equal" + arr + "   " + arr2);
 		}
+		
+		System.out.println(arr[0]+"  "+arr2[0]);
 	}
 
 }

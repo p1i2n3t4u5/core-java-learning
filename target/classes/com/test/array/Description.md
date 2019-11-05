@@ -33,6 +33,8 @@ We can avoid iteration over elements using clone() or System.arraycopy()
 clone() creates a new array of same size, but System.arraycopy() can be used to copy from a source range to a destination range.
 System.arraycopy() is faster than clone() as it uses Java Native Interface
 
+ System.arraycopy(source_arr, sourcePos, dest_arr,destPos, len); 
+
 Total Sub Array of an array
 --------------------------
  vector of N elements the total number of sub-arrays is N*(N+1)/2
