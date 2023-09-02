@@ -58,12 +58,12 @@ public class ArrayBasics {
 
 		// Conversion of array to ArrayList
 		// using Arrays.asList
-		List al = Arrays.asList(geeks);
+		List<Integer> al = Arrays.asList(geeks);
 		System.out.println(al);
 		System.out.println(al.size());
 
 		// al.add(34);
-		// this will throw error
+		// this will throw error  Arrays.asList returns an immutable object
 
 		List<Integer> newList = new ArrayList<>(al);
 		newList.add(56);
@@ -72,9 +72,12 @@ public class ArrayBasics {
 
 		Integer[] geeks2 = new Integer[10];
 		Integer[] geeks3 = newList.toArray(geeks2);
-
+		
+		System.out.println(geeks2+" "+geeks3);
 		System.out.println(Arrays.toString(geeks2));
 		System.out.println(Arrays.toString(geeks3));
+		System.out.println(geeks2 == geeks3);
+		System.out.println(geeks2.equals( geeks3));
 
 	}
 

@@ -14,6 +14,12 @@ public class ArrayCloning {
 		}
 		
 		System.out.println(arr[0]+"  "+arr2[0]);
+		
+		int[] arr3 = arr.clone();
+		System.out.println(arr3[0]);
+		System.out.println(arr.equals(arr3));
+		System.out.println(arr == arr3);
+		System.out.println(arr.getClass() == arr3.getClass());
 	}
 
 }
