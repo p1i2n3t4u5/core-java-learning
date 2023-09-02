@@ -44,7 +44,7 @@ ex:
  System.out::println 
  this:printMethod();
  
-Interation in collection
+Iteration in collection
 ------------------------
 
 Internal and external
