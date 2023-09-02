@@ -1,3 +1,0 @@
-TypeInference in lambdas
-------------------------
-
