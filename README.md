@@ -11,3 +11,13 @@ Scheduled Thread Pool : A thread pool made to schedule future task. Method : Exe
 
 Single Thread Scheduled Pool : A thread pool with only one thread to schedule future task. Method : Executors.newSingleThreadScheduledExecutor()
 
+Performance Considerations:
+--------------------------------
+Synchronized blocks and methods can introduce performance overhead due to the locking mechanism. Carefully consider whether synchronization is necessary and whether alternative approaches like using thread-safe data structures might be more appropriate.
+
+
+
+Compile Time Dependencies 
+-----------------------------
+Yes, you can package compile time dependencies with a JAR file. A JAR file, or Java Archive, is a package file format that contains all the components of a Java application, applet, or library. An "executable" JAR file includes all the dependencies needed to run the application, in addition to the project's classes and resources
+

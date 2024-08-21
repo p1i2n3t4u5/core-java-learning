@@ -1,5 +1,7 @@
 package com.test.lamblas;
 
+import java.util.function.BiFunction;
+
 public class MainClass {
 	
 	public static void main(String[] args) {
@@ -9,6 +11,7 @@ public class MainClass {
 		
 		Greeting greeting2=() -> System.out.println("Hello World From Lambda");
 		greeting2.greet();
+		
 		// difference between above two is in first approach we are creating an implementation class
 		// in second approach we are just the function
 		

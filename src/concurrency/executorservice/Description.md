@@ -6,7 +6,7 @@ Answer is usually when you develop a simple, concurrent application in Java, you
 
 A thread pool is a collection of pre-initialized threads. Generally the size of collection is fixed, but it is not mandatory. It facilitates the execution of N number of tasks using same threads. If there are more tasks than threads, then tasks need to wait in a queue like structure.
 
-When any thread completes it’s execution, it can pickup a new task from queue and execute it. When all tasks are completed the threads remain active and wait for more tasks in thread pool.
+When any thread completes itï¿½s execution, it can pickup a new task from queue and execute it. When all tasks are completed the threads remain active and wait for more tasks in thread pool.
 
 
 ExecutorService executorService1 = Executors.newSingleThreadExecutor();
@@ -62,6 +62,10 @@ submit(Runnable)   --> runs the threads asynchronously  and returns Future task 
 submit(Callable)   --> runs the threads asynchronously and future.get() returns the result from the executed thread
 invokeAny(...)     --> Runs any one of the Callable task  submitted to the executer  service.
 invokeAll(...)	   --> Rans all callable tasks parallel manner.
+
+
+
+
 
 
 

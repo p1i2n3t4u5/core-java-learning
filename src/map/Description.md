@@ -68,6 +68,30 @@ WeakHashMap
 WeakHashMap is an implementation of the Map interface. WeakHashMap is almost same as HashMap except in case of WeakHashMap, if object is specified as key doesn't contain any references- it is eligible for garbage collection even though it is associated with WeakHashMap. i.e Garbage Collector dominates over WeakHashMap.
 
 
+HashMap
+-------
+This is the most commonly used map class because it's fast and easy to use. It's an unordered collection that stores key-value pairs in a hash table. HashMap is efficient for locating, inserting, and deleting mappings, and it allows for null values and keys.
+
+TreeMap
+-----------
+
+This implementation of the Map interface stores key-value pairs and can be sorted by natural ordering or a Comparator. It's efficient for traversing keys in a sorted order.
+
+LinkedHashMap
+----------------
+Similar to HashMap, but with the added functionality of maintaining order. It can keep the order in which elements were added.
+
+ConcurrentHashMap: 
+------------------- 
+The underlined data structure for ConcurrentHashMap is Hashtable.
+ConcurrentHashMap class is thread-safe i.e. multiple threads can operate on a single object without any complications.
+At a time any number of threads are applicable for a read operation without locking the ConcurrentHashMap object which is not there in HashMap.
+In ConcurrentHashMap, the Object is divided into a number of segments according to the concurrency level.
+The default concurrency-level of ConcurrentHashMap is 16.
+In ConcurrentHashMap, at a time any number of threads can perform retrieval operation but for updated in the object, the thread must lock the particular segment in which the thread wants to operate. This type of locking mechanism is known as Segment locking or bucket locking. Hence at a time, 16 update operations can be performed by threads.
+Inserting null objects is not possible in ConcurrentHashMap as a key or value.
+
+
 
 
 

@@ -13,9 +13,8 @@ public class ReadingLargeFileUsingScanner {
 		Scanner sc = null;
 		try {
 			try {
-				inputStream = new FileInputStream("C:\\project\\sample.txt");
+				inputStream = new FileInputStream("C:\\Users\\npanigrahi\\Downloads\\FINPERF2_API_Test_40lines_dev.jmx");
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			sc = new Scanner(inputStream, "UTF-8");
@@ -28,7 +27,6 @@ public class ReadingLargeFileUsingScanner {
 				try {
 					throw sc.ioException();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -37,7 +35,6 @@ public class ReadingLargeFileUsingScanner {
 				try {
 					inputStream.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}

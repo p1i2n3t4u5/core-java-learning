@@ -16,13 +16,8 @@ public class PrintingThread implements Runnable {
 		while (number < PRINT_NUMBERS_UPTO - 1) {
 			synchronized (lock) {
 				System.out.println(Thread.currentThread().getName() +"  got the lock)");
-				try {
-					Thread.sleep(100);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				while (number % 3 != remainder) { // wait for numbers other than remainder
+				sleep();
+				if (number % 3 != remainder) { // wait for numbers other than remainder
 					try {
 						System.out.println(Thread.currentThread().getName() +" before wait()");
 						lock.wait();
@@ -31,26 +26,24 @@ public class PrintingThread implements Runnable {
 						e.printStackTrace();
 					}
 				}
-				try {
-					Thread.sleep(100);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				sleep();
 				System.out.println(Thread.currentThread().getName() + " " + number);
 				number++;
 				System.out.println(Thread.currentThread().getName() +" before notify()");
 				lock.notifyAll();
 				System.out.println(Thread.currentThread().getName() +" after notify()");
-				try {
-					Thread.sleep(100);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				sleep();
 			}
 		}
 
 	}
+
+  private void sleep() {
+    try {
+    	Thread.sleep(100);
+    } catch (InterruptedException e1) {
+    	e1.printStackTrace();
+    }
+  }
 
 }

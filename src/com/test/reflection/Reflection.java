@@ -29,7 +29,7 @@ public class Reflection {
 		// e1.printStackTrace();
 		// }
 
-		Class<?> c = Class.forName("com.javatest.reflection.Student");
+		Class<?> c = Class.forName("com.test.reflection.Student");
 		method = c.getMethod("setName", String.class);
 
 		Student student2 = new Student();

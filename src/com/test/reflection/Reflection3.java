@@ -16,25 +16,18 @@ public class Reflection3 {
 			constructor.setAccessible(true);
 			student = (Student) constructor.newInstance("Hello");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (NoSuchMethodException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SecurityException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -45,7 +38,6 @@ public class Reflection3 {
 		try {
 			constructor2 = (Constructor<Student>) c.getConstructor(String.class, int.class);
 		} catch (NoSuchMethodException | SecurityException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		Student student2=null;
@@ -53,7 +45,6 @@ public class Reflection3 {
 			student2 = constructor2.newInstance("hello", 12);
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
 				| InvocationTargetException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(student2);

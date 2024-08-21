@@ -1,6 +1,6 @@
 Object Cloning in Java
 -------------------------
-constructor in javaThe object cloning is a way to create exact copy of an object. The clone() method of Object class is used to clone an object.
+The object cloning is a way to create exact copy of an object. The clone() method of Object class is used to clone an object.
 
 The java.lang.Cloneable interface must be implemented by the class whose object clone we want to create. If we don't implement Cloneable interface, clone() method generates CloneNotSupportedException.
 
@@ -70,6 +70,25 @@ Object class clone() method supports shallow copying.
 https://javarevisited.blogspot.com/2013/09/how-clone-method-works-in-java.html
 https://javarevisited.blogspot.com/2015/01/java-clone-tutorial-part-2-overriding-with-mutable-field-example.html
 https://javarevisited.blogspot.com/2014/03/how-to-clone-collection-in-java-deep-copy-vs-shallow.html
+
+Array clone
+-------------
+Array of immutable objects and primitive types no need to worry about deep copy .
+with shallow copy also the objects and values are independent . update in one will not effect the other .
+
+array.clone() for non immutable objects creates shallow copy . update in one will effect the other even if inner objects have implemented clone method.
+
+
+
+String clone 
+-------------------------
+In Java, Strings are immutable, meaning their values cannot be changed once created. This also means that you don't need a clone() method to create a copy of a String.
+To create a copy of a String, you can simply assign it to a new variable:
+Java
+
+String original = "Hello, World!";
+String copy = original;
+This creates a new reference (copy) pointing to the same String object in memory. Since Strings are immutable, you don't need to worry about changes to one affecting the other.
 
 
 

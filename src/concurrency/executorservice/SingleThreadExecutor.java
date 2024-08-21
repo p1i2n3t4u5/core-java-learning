@@ -18,7 +18,6 @@ public class SingleThreadExecutor {
 				try {
 					Thread.sleep(10l);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				System.out.println("Run method called");
@@ -39,7 +38,6 @@ public class SingleThreadExecutor {
 				try {
 					Thread.sleep(100l);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				System.out.println("Run method called");
@@ -54,7 +52,6 @@ public class SingleThreadExecutor {
 			Object object = future.get();
 			System.out.println(object);
 		} catch (InterruptedException | ExecutionException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -88,7 +85,6 @@ public class SingleThreadExecutor {
 			Object object = future2.get();
 			System.out.println(object);
 		} catch (InterruptedException | ExecutionException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

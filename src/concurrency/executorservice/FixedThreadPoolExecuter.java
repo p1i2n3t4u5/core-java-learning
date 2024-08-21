@@ -62,7 +62,6 @@ public class FixedThreadPoolExecuter {
 		try {
 			futures = executorService.invokeAll(callables);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -71,7 +70,6 @@ public class FixedThreadPoolExecuter {
 			try {
 				s = future.get();
 			} catch (InterruptedException | ExecutionException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			System.out.println("Future:" + s);

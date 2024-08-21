@@ -61,30 +61,25 @@ public class SingleThreadExecuterInvokeAll {
 		
 		
 		
-		//this will be blocked till all the threads are executed
+//this will be blocked till all the threads are executed
 //		futures.forEach((s)-> {
 //			try {
 //				System.out.println(s.get());
 //			} catch (InterruptedException | ExecutionException e) {
-//				// TODO Auto-generated catch block
 //				e.printStackTrace();
 //			}
 //		});
-		
-		//futures.forEach(System.out::println);
+//    futures.forEach(System.out::println);
 		
 		for (Future<String> future : futures) {
 			String s=null;
 			try {
 				s = future.get();
 			} catch (InterruptedException | ExecutionException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			System.out.println("Future:"+s);
 		}
-		
-		
 
 		executorService.shutdown();
 	}

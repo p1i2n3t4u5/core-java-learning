@@ -10,6 +10,7 @@ public class ArrayBasics {
 		int[] myIntArray = new int[5];
 		String[] strArray = new String[5];
 		int[] myInteArray = { 1, 2, 3, 4, 5, 6 };
+		
 
 		int num = 10;
 		System.out.println("array length:" + myIntArray.length);
@@ -48,6 +49,8 @@ public class ArrayBasics {
 		// copy array will not work
 		int[] copyArray4 = myIntArray;
 		copyArray4[0]++;
+		++copyArray4[1];
+		copyArray4[2]=copyArray4[2]+5;
 		System.out.println(Arrays.toString(myIntArray));
 		System.out.println(Arrays.toString(copyArray4));
 		System.out.println("incrementing element in one array will increment of other array");
@@ -78,6 +81,17 @@ public class ArrayBasics {
 		System.out.println(Arrays.toString(geeks3));
 		System.out.println(geeks2 == geeks3);
 		System.out.println(geeks2.equals( geeks3));
+		
+		 Object[] o = new Object[10];
+		  int a =10;
+		  o[0] = a;
+		  o[1] = "aaa";
+		  o[2] = true;
+		  System.out.println(o);
+		  for (int i = 0; i < o.length; i++) {
+			System.out.println(o[i] );
+		}
+		  
 
 	}
 

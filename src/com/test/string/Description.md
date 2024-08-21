@@ -59,6 +59,12 @@ you can just ref to the original String, for example:
 String key2 = key1;// or using key1 directly instead.
 
 
+Immutability of Strings:
+------------------------------
+Strings in Java are immutable, meaning their state cannot be changed once created. When you modify a String, you are actually creating a new String object. Therefore, locking on a String object might not be as common as locking on mutable objects.
+
+
+
 
   
 

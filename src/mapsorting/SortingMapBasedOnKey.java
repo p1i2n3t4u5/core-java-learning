@@ -54,6 +54,16 @@ public class SortingMapBasedOnKey {
 		map2.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEachOrdered((e) -> {
 			System.out.println("Key:" + e.getKey() + "  " + e.getValue());
 		});
+		
+		System.out.println(
+        "------------------------sorting in revere order using java 8 stream by value ---------------------------");
+		
+
+
+    map2.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEachOrdered((e) -> {
+      System.out.println("Key:" + e.getKey() + "  " + e.getValue());
+    });
+
 
 		System.out.println(
 				"------------------------sorting based on value or key using Collections.sort()---------------------------");
@@ -70,7 +80,6 @@ public class SortingMapBasedOnKey {
 
 			@Override
 			public int compare(Entry<String, String> o1, Entry<String, String> o2) {
-				// TODO Auto-generated method stub
 				return o1.getValue().compareTo(o2.getValue());
 			}
 		});

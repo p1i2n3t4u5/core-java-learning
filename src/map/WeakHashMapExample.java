@@ -14,7 +14,7 @@ public class WeakHashMapExample {
 		weakHashMap.put(mykey, myvalue);
 		mykey=null;
 		System.out.println(weakHashMap);
-		System.gc();
+	  System.gc();
 		Thread.sleep(4000);
 		System.out.println(weakHashMap);
 	}

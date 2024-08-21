@@ -6,7 +6,7 @@ public class ArrayTest5 {
 
 	// arr[sc.nextInt()%k]++; initialize the counter of remainders present
 	//
-	// for example if k=5 then for any inpyt, er can have 0,1,2,3,4 as remainder
+	// for example if k=5 then for any input, er can have 0,1,2,3,4 as remainder
 	//
 	// This is like a lookup table saying : in the set of numbers you have , there
 	// are x counts of numbers which give remainder 0 when divided by k,y counts of

@@ -40,8 +40,8 @@ public class Address implements Cloneable {
 	@Override
 	protected Address clone() throws CloneNotSupportedException {
 		Address address = (Address) super.clone();
-//		address.setCity(new String(this.city));
-//		address.setStreet(new String(this.street));
+		address.setCity(this.city);
+		address.setStreet(this.street);
 		return address;
 	}
 

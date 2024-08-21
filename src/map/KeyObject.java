@@ -21,7 +21,6 @@ public class KeyObject  {
     
     @Override
     public boolean equals(Object obj) {
-    	// TODO Auto-generated method stub
     	return this.amount==((KeyObject)obj).amount;
     }
 

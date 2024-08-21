@@ -14,9 +14,9 @@ public class MainClass {
 		
 		
 		t2.start();
-		Thread.sleep(100);
+		//Thread.sleep(100);
 		t3.start();
-		Thread.sleep(100);
+		//Thread.sleep(100);
 		t1.start();
 	
 	}

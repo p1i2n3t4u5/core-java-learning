@@ -50,8 +50,8 @@ public class Student implements Cloneable{
 	protected Student clone() throws CloneNotSupportedException {
 		Student clonedObj = (Student) super.clone();
 		clonedObj.setAddress(address.clone());
-//		clonedObj.setId(this.id);
-//		clonedObj.setName(new String(this.name));
+		clonedObj.setId(this.id);
+		clonedObj.setName(this.name);
 		return clonedObj;
 	}
 

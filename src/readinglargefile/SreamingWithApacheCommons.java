@@ -27,7 +27,6 @@ public class SreamingWithApacheCommons {
 			try {
 				it.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
