@@ -1,10 +1,10 @@
 
 To create immutable class in java, you have to do following steps.
 ------------------------------------------------------------------
-1)Declare the class as final so it can’t be extended.
+1)Declare the class as final so it can't be extended.
 2)Make all fields private so that direct access is not allowed.
-3)Don’t provide setter methods for variables
-4)Make all mutable fields final so that it’s value can be assigned only once.
+3)Don't provide setter methods for variables
+4)Make all mutable fields final so that it's value can be assigned only once.
 5)Initialize all the fields via a constructor performing deep copy.
 6)Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
 
@@ -33,6 +33,12 @@ we have to call the inner objects clone() method also.
 If it is a collection  and contains objects as key or value ,then we have to write our own logic to clone the collection. 
 
 Object class clone() method always does shallow copy/cloning.
+
+
+Immutability can be Broken By not declaring class as final
+-----------------------------------------------------------
+
+Notice that in my Mutable subclass, I've overridden the behavior of getValue to read a new, mutable field declared in my subclass. As a result, your class, which initially looks immutable, really isn't immutable. I can pass this Mutable object wherever an Immutable object is expected, which could do Very Bad Things to code assuming the object is truly immutable. Marking the base class final prevents this from happening
 
 
 

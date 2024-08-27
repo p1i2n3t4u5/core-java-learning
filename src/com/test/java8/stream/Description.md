@@ -1,6 +1,6 @@
 Java 8 Streams
 ----------------------
-All the Java Stream API interfaces and classes are in the java.util.stream package. Since we can use primitive data types such as int, long in the collections using auto-boxing and these operations could take a lot of time, there are specific classes for primitive types – IntStream, LongStream and DoubleStream.
+All the Java Stream API interfaces and classes are in the java.util.stream package. Since we can use primitive data types such as int, long in the collections using auto-boxing and these operations could take a lot of time, there are specific classes for primitive types ï¿½ IntStream, LongStream and DoubleStream.
 
 
 Through Java 8 stream api we generally go internal iteration . we can take the advantage of parallel processing.
@@ -16,8 +16,8 @@ usages  of Function functions
 -----------------------------
  
 *<R> Stream<R> map(Function<? super T, ? extends R> mapper)
-IntStream mapToInt(ToIntFunction<? super T> mapper) – similarly for long and double returning primitive specific stream.
-IntStream flatMapToInt(Function<? super T, ? extends IntStream> mapper) – similarly for long and double.Takes one type and finally converts to different stream like InStream,FloatStream etc
+IntStream mapToInt(ToIntFunction<? super T> mapper) ï¿½ similarly for long and double returning primitive specific stream.
+IntStream flatMapToInt(Function<? super T, ? extends IntStream> mapper) ï¿½ similarly for long and double.Takes one type and finally converts to different stream like InStream,FloatStream etc
                    
 <A> A[] toArray(IntFunction<A[]> generator)
 <U> U reduce(U identity, BiFunction<U, ? super T, U> accumulator, BinaryOperator<U> combiner)
@@ -109,14 +109,27 @@ ava Stream API operations that returns a new Stream are called intermediate oper
 
 Terminal Operations
 ---------------------
- ava 8 Stream API operations that returns a result or produce a side effect. Once the terminal method is called on a stream, it consumes the stream and after that we can’t use stream. Terminal operations are eager in nature i.e they process all the elements in the stream before returning the result. Commonly used terminal methods are ( forEach, toArray, min, max, findFirst, anyMatch, allMatch) etc. You can identify terminal methods from the return type, they will never return a Stream.
+ ava 8 Stream API operations that returns a result or produce a side effect. Once the terminal method is called on a stream, it consumes the stream and after that we canï¿½t use stream. Terminal operations are eager in nature i.e they process all the elements in the stream before returning the result. Commonly used terminal methods are ( forEach, toArray, min, max, findFirst, anyMatch, allMatch) etc. You can identify terminal methods from the return type, they will never return a Stream.
  
 Short Circuiting Operations
 ---------------------------
  An intermediate operation is called short circuiting, if it may produce finite stream for an infinite stream. For example (limit() and skip()) are two short circuiting intermediate operations.
  
  A terminal operation is called short circuiting, if it may terminate in finite time for infinite stream. For example (anyMatch, allMatch, noneMatch, findFirst and findAny) are short circuiting terminal operations.
+ 
+ 
+Reduce Operation On Stream
+-----------------------------------
+identity â€“ an element that is the initial value of the reduction operation and the default result if the stream is empty
+Accumulator â€“ a function that takes two parameters: a partial result of the reduction operation and the next element of the stream
+Combiner â€“ a function used to combine the partial result of the reduction operation when the reduction is parallelized or when thereâ€™s a mismatch between the types of the accumulator arguments and the types of the accumulator implementation
 
+
+When a stream executes in parallel, the Java runtime splits the stream into multiple substreams. In such cases, we need to use a function to combine the results of the substreams into a single one. This is the role of the combiner.
+
+Java 12  steam changes
+----------------------
+The Collectors.teeing() method in Java 12 and later is used to combine the results of two separate collectors into a single result. It allows you to perform two different collections operations simultaneously on the same stream and then merge the results into a single value.
 
 
 

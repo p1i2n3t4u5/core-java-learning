@@ -11,7 +11,7 @@ public class Collection1 {
 		HashMap<Character, Integer> hashMap = new HashMap<>();
 
 		for (int i = 0; i < carray.length; i++) {
-			Character character = new Character(carray[i]);
+			Character character = Character.valueOf(carray[i]);
 			if (hashMap.keySet().contains(character)) {
 				Integer value = hashMap.get(character);
 				hashMap.put(character, value + 1);

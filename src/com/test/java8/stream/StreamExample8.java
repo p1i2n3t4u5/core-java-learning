@@ -1,4 +1,4 @@
-package com.test.lamblas7;
+package com.test.java8.stream;
 
 import java.util.ArrayList;
 import java.util.Comparator;

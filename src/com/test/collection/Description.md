@@ -16,7 +16,7 @@ Similarities between LinkedList and ArrayList
 Both ArrayList and LinkedList are implementation of List interface.
 They both maintain the elements insertion order which means while displaying ArrayList and LinkedList elements the result set would be having the same order in which the elements got inserted into the List.
 Both these classes are non-synchronized and can be made synchronized explicitly by using Collections.synchronizedList method.
-The iterator and listIterator returned by these classes are fail-fast (if list is structurally modified at any time after the iterator is created, in any way except through the iterator’s own remove or add methods, the iterator will throw a ConcurrentModificationException).
+The iterator and listIterator returned by these classes are fail-fast (if list is structurally modified at any time after the iterator is created, in any way except through the iterator's own remove or add methods, the iterator will throw a ConcurrentModificationException).
 
 
 When to use LinkedList and when to use ArrayList?

@@ -2,6 +2,8 @@ package com.test.array;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 
 //check if duplicate present
@@ -15,6 +17,7 @@ public class DetectDuplicateInArray {
 
 		System.out.println(arrayTest13.approach2(arr));
 		System.out.println(arrayTest13.approach3(arr));
+		System.out.println(arrayTest13.approachJava8(arr));
 
 	}
 
@@ -33,13 +36,13 @@ public class DetectDuplicateInArray {
 
 	public boolean approach2(int[] arr) {
 
-		Set<Integer> list = new HashSet<>();
+		Set<Integer> set = new HashSet<>();
 
 		for (int i = 0; i < arr.length; i++) {
-			list.add(arr[i]);
+		  set.add(arr[i]);
 		}
 
-		if (list.size() != arr.length) {
+		if (set.size() != arr.length) {
 			return true;
 		}
 		return false;
@@ -58,5 +61,15 @@ public class DetectDuplicateInArray {
 		return false;
 
 	}
+	
+	 public boolean approachJava8(int[] arr) {
+	    
+	   Set<Integer> set =   IntStream.of(arr).boxed().collect(Collectors.toSet());
+	    
+	   if (set.size() != arr.length) {
+	      return true;
+	    }
+	    return false;
+	  }
 
 }
