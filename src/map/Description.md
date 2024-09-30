@@ -67,6 +67,8 @@ WeakHashMap
 -----------
 WeakHashMap is an implementation of the Map interface. WeakHashMap is almost same as HashMap except in case of WeakHashMap, if object is specified as key doesn't contain any references- it is eligible for garbage collection even though it is associated with WeakHashMap. i.e Garbage Collector dominates over WeakHashMap.
 
+usage: cache implementation 
+
 
 HashMap
 -------
